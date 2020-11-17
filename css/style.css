@@ -39,7 +39,7 @@ body{
 }
 
 .header-text{
-    color: #ffffff;
+    color: #ffffff
 }
 
 .weather{
@@ -81,7 +81,7 @@ footer{
 }
 
 .city-name{
-    margin: 1.3rem 1rem;
+    margin: 1.3rem .1rem;
     font-size: 2rem;
 
 }
