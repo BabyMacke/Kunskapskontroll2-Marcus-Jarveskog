@@ -30,7 +30,7 @@ body{
 /* -----------Header---------- */
 
 .header{
-    height: 55vh;
+    height: 55%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,7 +65,7 @@ body{
 footer{
     display: flex;
     flex-direction: column;
-    height: 45vh;
+    height: 45%;
     background-color: #1a1a1a57;
     align-items: center;
     padding: 2rem;
@@ -73,9 +73,17 @@ footer{
     border-top: #ffffff71 solid 1px;
 }
 
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
 .city-name{
-    margin: 1.3rem 0;
+    margin: 1.3rem 1rem;
     font-size: 2rem;
+
 }
 
 .info-box{
