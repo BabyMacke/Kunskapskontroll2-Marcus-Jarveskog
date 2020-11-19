@@ -1,11 +1,9 @@
 
-
-
 //selecta form och sätt en event listner på den
 let form = document.querySelector('#city-form');
 form.addEventListener('submit', function(e){
     e.preventDefault();
-    //gör så att det användaren skriver in i sökfältet använda för att hämta data från API
+    //gör så att det användaren skriver in i sökfältet används för att hämta data från API
     let cityNameInput = document.querySelector('#city-name')
 
     let cityName = cityNameInput.value;
