@@ -8,22 +8,22 @@
 
 body{
     font-family: 'Roboto', sans-serif;
+    background-color: rgb(54, 54, 54);
 }
 
 #wrapper{
-    max-width: 500px;
-    margin: 0 auto;
-    background-color: purple;
-    height: 100vh;
+    max-width: 450px;
+    margin: 50px auto;
 }
 
 .app-container{
     width: 100%;
-    height: 100%;
-    background-image: url("../img/orange-tone.jpg");
+    height: 800px;
+    background-image: url("../img/autumn-img.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    border-radius: 10px;
 }
 
 
@@ -40,6 +40,10 @@ body{
 
 .header-text{
     color: #ffffff
+}
+
+.error{
+    color: red;
 }
 
 .weather{
@@ -71,7 +75,52 @@ footer{
     padding: 2rem;
     color: #ffffff;
     border-top: #ffffff71 solid 1px;
+    border-radius: 10px;
 }
+
+/* form styling */
+
+
+#city-form{
+    border: solid 1px rgb(187, 186, 186);
+    border-radius: 15px;
+    padding: 3px 3px;
+    text-align: center;
+}
+
+#city-name{
+    border: none;
+    outline: none;
+    height: 1.5rem;
+    width: 0; 
+
+    background-color: transparent;
+    color: #ffffff;
+
+    transition: ease 300ms;
+}
+
+#city-form:hover > #city-name{
+    width: 7.6rem;
+    padding-left: 5px;
+}
+
+#city-name:focus{
+    width: 7.6rem;
+    padding-left: 5px;
+}
+
+.fas{
+    color: rgb(218, 216, 216);
+    padding-right: 3px;
+    padding-top: 2px;
+}
+
+.icon{
+    display: none;
+}
+
+/* info box */
 
 .title{
     display: flex;
@@ -88,14 +137,13 @@ footer{
 
 .info-box{
     width: 100%;
-    margin-top: 2.5rem;
 }
 
 
 .list-item{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
 
     font-size: 1.1rem;
 }
