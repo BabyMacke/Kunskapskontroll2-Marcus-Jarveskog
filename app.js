@@ -50,7 +50,7 @@ function addDataToDom(n,i,d,t,ws,h){
     let tempBig = document.querySelector('.header .temp');
     let tempSmall = document.querySelector('.info-list .temp');
     tempBig.innerHTML = `${t}<span>°</span>`;
-    tempSmall.innerText = t;
+    tempSmall.innerText = t + "°C";
 
     //vädrets beskrivning
     let weatherElement = document.querySelector('.weather');
@@ -80,10 +80,10 @@ function addDataToDom(n,i,d,t,ws,h){
 function changeBackground(temp){
     let appContainer = document.querySelector('.app-container');
     if(temp <= 5){
-        appContainer.style.backgroundImage = "url('../img/cold-img.jpg')"
+        appContainer.style.backgroundImage = "url('./img/cold-img.jpg')"
     } else if(temp > 5 && temp <= 20){
-        appContainer.style.backgroundImage = "url('../img/autumn-img.jpg')"
+        appContainer.style.backgroundImage = "url('./img/autumn-img.jpg')"
     } else if(temp > 20){
-        appContainer.style.backgroundImage = "url('../img/summer-img.jpg')"
+        appContainer.style.backgroundImage = "url('./img/summer-img.jpg')"
     }
 }
