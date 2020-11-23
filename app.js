@@ -12,11 +12,28 @@ form.addEventListener('submit', function(e){
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${apiKey}`
 
 
+    // selecta textrutan där error medelanden ska visas
+    let errorMessage = document.querySelector('.error');
     //kalla på och hämta data från APIn
-    let errorMessage = document.querySelector('.error')
     fetch(url).then(
         function(response){
-            return response.json();
+            //sätt error medelandet som tomt
+            errorMessage.innerText = "";
+             // kolla ifall allt har gått bra i koden
+            if (response.status >= 200 && response.status < 300) {
+                return response.json();
+            }
+        
+            // när status kod 404 kommer så betyder det att staden är felstavad eller ej finns
+            else if (response.status === 404) {
+                throw "!City not found, check spelling!";
+            }
+        
+            //401 kommer när det är något fel med api key
+            else if (response.status === 401) {
+                throw "API error";
+            }
+
         }
     ).then(
         function(data){
@@ -31,13 +48,13 @@ form.addEventListener('submit', function(e){
             addDataToDom(name,icon,description,temp,windSpeed,humidity);
             changeBackground(temp);
             //ta bort error text ifall där är någon
-            errorMessage.innerText = ""
+            /* errorMessage.innerText = "" */
             
         }
     ).catch(function(error){
         
         //lägg till en error text
-        errorMessage.innerText = "the city was not found, check spelling"
+        errorMessage.innerText = error;
     
     });
 
